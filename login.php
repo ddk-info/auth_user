@@ -35,7 +35,7 @@
   
   <!-- Stylesheets -->
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet'>
-  <link rel="stylesheet" href="assets/stylesheets/login-form.css">
+  <link rel="stylesheet" href="assets/stylesheets/base.css">
 
   <!-- Optimize for mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
