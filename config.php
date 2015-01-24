@@ -1,12 +1,9 @@
 <?php
-  $host="localhost"; // Host name
-  $username="root"; // Mysql username
-  $password="root"; // Mysql password
-  $db_name="auth_user"; // Database name
+  $mysqli = new mysqli('localhost', 'root', 'root', 'auth_user');
+  if ($mysqli->errno) {
+    printf ("Unnable to connect to the database: <br/>  %s", $mysqli->errno);
+    exit();
 
-
-  // Connect to server and select databse.
-  $connection = mysqli_connect("$host", "$username", "$password")or die("cannot connect to server");
-  $db_select  = mysqli_select_db($connection, $db_name) or die("cannot select DB");
-
+  }
 ?>
+
