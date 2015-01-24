@@ -14,10 +14,7 @@
     if($result == false)
       echo '<a href="register.php">Error: cannot execute query</a>';
     else
-
       echo "create sucess";
-
-    // mysql_close($mysqli->connection);
     exit;
   }
 ?>
@@ -29,3 +26,4 @@
   Last Name: <input type= "text" name="last_name"/> <br/>
   <input type="submit" value="Resgister" name="submit" />
 </form>
+

@@ -5,16 +5,22 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $query="SELECT * FROM users WHERE username='$username' and password='$password'";
-    $result = $mysqli->query($query);
+    if(!empty($username) && !empty($password)) {
+      $query="SELECT * FROM users WHERE username='$username' and password='$password'";
+      $result = $mysqli->query($query);
 
-    if ($result->num_rows > 0 ){
-      echo "success loginin";
+      if ($result->num_rows > 0 ){
+        echo "success loginin";
 
+      }
+      else {
+        echo "<script>alert('Username or Password is invalid')</script>";;
+      }
     }
     else {
-      echo "failed";
+      echo "<script>alert('Please input your username and password before you login.')</script>";
     }
+      
   }
 
 ?>
@@ -38,6 +44,7 @@
           <p class="center"><input value="Login" type="submit" class="center" /></p>
         </fieldset>
       </form>
+      <strong> No Account? <a href="register.php"> Register Here! </a></strong>
     </div>
     </body>
   </html>
