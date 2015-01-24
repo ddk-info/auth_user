@@ -1,5 +1,6 @@
 <?php
   include ("config.php");
+  ob_start();
    if (isset($_POST['username']) && isset($_POST['password'])) {
 
     $username = $_POST['username'];
@@ -10,7 +11,8 @@
       $result = $mysqli->query($query);
 
       if ($result->num_rows > 0 ){
-        echo "success loginin";
+        header("Location: dashboard.php");
+        die();
 
       }
       else {

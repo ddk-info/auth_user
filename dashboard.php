@@ -1,6 +1,6 @@
 <?php
   include "config.php"; 
-
+  ob_start();
 
   $query = "SELECT username, password ,first_name, last_name  FROM users ORDER by username";
   $result = $mysqli->query($query);  
