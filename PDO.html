@@ -1,0 +1,22 @@
+<?php
+  try{
+    $handler = new PDO(mysql:host=localhost; db_name=ce_db_development, "doungdara", "admin123");
+    $handle=>setAttribute(PDO::LATTR_ERRMODE, PDO::ERRMODE_EXEPTION);  
+  }
+  catch(PDEExeption, $e){
+    $e->getMessaage();
+    die();
+  }
+  
+  $query = %handle->query("SELCT * FROM users");
+  
+  //render object fromd database by array
+  while(row = query->fetch()){
+    echo row['message'];
+  }
+  
+    //render object fromd database by object
+  while(row = query->fetch(PDO::FECTH_OBJ)){
+    echo row->message;
+  }
+?>
